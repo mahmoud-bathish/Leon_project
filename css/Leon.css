@@ -125,12 +125,15 @@ font-family: 'Work Sans', sans-serif;
     right: 0;
     min-width: 200px;
     top: 35px;
-    display: none;
+    /* display: none; */
     z-index: 1; 
 }
-.header .links:hover ul {
-    display: block;
+.activee {
+    display: none;
 }
+/* .header .links:hover ul {
+    display: block;
+} */
 .header .links ul::before {
     content: "";
     border-width: 10px;
