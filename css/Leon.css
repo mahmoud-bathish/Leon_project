@@ -12,6 +12,26 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #b7b7b8;
+    border-radius: 30px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #939393;
+  }
 
 html {
     scroll-behavior: smooth;
@@ -91,15 +111,15 @@ font-family: 'Work Sans', sans-serif;
 .header .links{
     position: relative;
 }
-.header .links:hover .icon span:nth-child(2){
-    width: 100%;
+.increase-width{
+    width: 100% !important;
 }
 .header .links .icon{
     width: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-
+    cursor: pointer;
 }
 .header .links .icon span{
     background-color: #333;
@@ -131,9 +151,6 @@ font-family: 'Work Sans', sans-serif;
 .activee {
     display: none;
 }
-/* .header .links:hover ul {
-    display: block;
-} */
 .header .links ul::before {
     content: "";
     border-width: 10px;
@@ -162,6 +179,7 @@ font-family: 'Work Sans', sans-serif;
 .landing{
     background-image: url(../images/last-mount.jpg );
     background-size: cover;
+    background-attachment: fixed;
     height: calc(100vh - 64px);
     position: relative;
 }
@@ -183,6 +201,7 @@ font-family: 'Work Sans', sans-serif;
 .landing .intro-text p{
     font-size: 19px;
     line-height: 1.8;
+    background-color: #eee;
 }
 /* EndLanding Section */
 
@@ -299,6 +318,12 @@ features .feat p{
 
 .portfolio .portfolio-content .card {
     background-color: white;
+    transition: 0.4s;
+}
+
+.portfolio .portfolio-content .card:hover {
+    transform: rotate(2deg);
+    scale: 1.05;
 }
 
 .portfolio .portfolio-content .card img {
